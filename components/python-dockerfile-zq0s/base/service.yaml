@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: python-dockerfile-zq0s
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: python-dockerfile-zq0s
+    app.kubernetes.io/part-of: my-app123456
+  name: python-dockerfile-zq0s
+  namespace: jkopriva-tenant
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: python-dockerfile-zq0s
+status:
+  loadBalancer: {}
